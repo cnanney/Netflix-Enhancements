@@ -1,4 +1,4 @@
-# Netflix Details Link
+# [Netflix Details Link](https://chrome.google.com/webstore/detail/netflix-details-link/glefmeoggphbdgeddmnmhfejpiipcmlf)
 
 This extension simply adds a details link to each item so you can instantly go right to movie info, or see an episode list, without having to first wait for the popover and then click on the title. This has always been an annoyance of mine since they redesigned the site.
 
