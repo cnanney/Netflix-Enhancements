@@ -1,0 +1,24 @@
+{
+	"name": "Netflix Details Link",
+	"version": "0.1",
+
+	"description": "Adds a details link to media covers when browsing Netflix.",
+
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"permissions": [
+		"tabs",
+		"webRequest",
+		"*://*.netflix.com/*"
+	],
+	"content_scripts": [
+		{
+			"matches": ["*://*.netflix.com/*"],
+			"exclude_matches": ["*://*.netflix.com/WiPlayer*", "*://*.netflix.com/Kids*"],
+			"js": ["jquery-1.8.2.js", "content.js"],
+			"css": ["style.css"]
+		}
+	],
+	"manifest_version": 2
+}

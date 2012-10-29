@@ -1,0 +1,45 @@
+#displaypage-content a.episodeBadge {
+	color: #fff;
+}
+
+a.episodeBadge{
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.7);
+	cursor: pointer;
+	visibility: hidden;
+	z-index: 14;
+}
+
+.boxShot-lg a.episodeBadge {
+	font-size: 10px;
+	line-height: 24px;
+	font-weight: normal;
+}
+
+.boxShot-166 a.episodeBadge {
+	font-size: 14px;
+	line-height: 34px;
+}
+
+a.episodeBadge.inqueue {
+	visibility: visible;
+}
+
+a.episodeBadge.hoveronly {
+	visibility: hidden;
+}
+
+span.hoverPlay:hover a.episodeBadge {
+	visibility: visible;
+}
+
+.mrow .evidence a.episodeBadge:hover {
+	text-decoration: none;
+}
