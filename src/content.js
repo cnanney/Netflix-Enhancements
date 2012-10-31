@@ -43,9 +43,9 @@
 
 		var stop = new Date().getMilliseconds();
 
-		if (time) return (stop - start);
+		return time ? (stop - start) : true;
 	}
 
-	run(false);
+	run();
 
 })();
