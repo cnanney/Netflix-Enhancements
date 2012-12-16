@@ -7,12 +7,12 @@ This extension gives you the ability to:
 
 ## Changelog
 
-### 0.2 - 12/15/12 ###
+### v0.2 - 12/15/12 ###
 
 - Change name to Netflix Enhancements
 - Add Rotten Tomatoes ratings
 
-### 0.1 - 10/29/12 ###
+### v0.1 - 10/29/12 ###
 
 - Initial release
 
