@@ -1,0 +1,85 @@
+#displaypage-content a.episodeBadge {
+  color: #fff;
+}
+a.episodeBadge {
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  visibility: hidden;
+  z-index: 14;
+}
+.boxShot-lg a.episodeBadge {
+  font-size: 10px;
+  line-height: 24px;
+  font-weight: normal;
+}
+.boxShot-166 a.episodeBadge {
+  font-size: 14px;
+  line-height: 34px;
+}
+a.episodeBadge.inqueue {
+  visibility: visible;
+}
+a.episodeBadge.hoveronly {
+  visibility: hidden;
+}
+span.hoverPlay:hover a.episodeBadge {
+  visibility: visible;
+}
+.mrow .evidence a.episodeBadge:hover {
+  text-decoration: none;
+}
+a.ne-rating {
+  display: block;
+  height: 40px;
+  margin-top: 5px;
+  padding-left: 45px;
+  background: url(chrome-extension://__MSG_@@extension_id__/img/rt-sprite.png) #ffffff no-repeat;
+}
+a.ne-rating span {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 40px;
+}
+a.ne-rating.ne-fresh {
+  background-position: 0 0;
+}
+a.ne-rating.ne-rotten {
+  background-position: 0 -40px;
+}
+a.ne-rating.ne-certified-fresh {
+  background-position: 0 -80px;
+}
+#ne-popup {
+  width: 300px;
+  padding: 0 10px;
+}
+#ne-popup h4 {
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eeeeee;
+}
+#ne-popup form {
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+#ne-popup .notice {
+  text-align: center;
+  background-color: #eee;
+  font-size: 11px;
+  margin-bottom: 0;
+}
+#ne-popup .footer {
+  border-top: 1px solid #eeeeee;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 12px;
+  margin: 0 0 5px;
+}

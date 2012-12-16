@@ -1,24 +1,45 @@
 {
-	"name": "Netflix Details Link",
-	"version": "0.1",
+	"name": "Netflix Enhancements",
+	"version": "0.2",
 
-	"description": "Adds a details link to media covers when browsing Netflix.",
+	"description": "Enhancing your Netflix browsing experience.",
+
+	"icons": {
+		"16": "img/icon-red-16.png",
+		"48": "img/icon-red-48.png",
+		"128": "img/icon-red-128.png"
+	},
 
 	"background": {
-		"scripts": ["background.js"]
+		"scripts": ["js/background.js"]
 	},
+
 	"permissions": [
-		"tabs",
 		"webRequest",
-		"*://*.netflix.com/*"
+		"tabs",
+		"*://*.netflix.com/*",
+		"*://api.rottentomatoes.com/*"
 	],
+
 	"content_scripts": [
 		{
 			"matches": ["*://*.netflix.com/*"],
 			"exclude_matches": ["*://*.netflix.com/WiPlayer*", "*://*.netflix.com/Kids*"],
-			"js": ["jquery-1.8.2.js", "content.js"],
-			"css": ["style.css"]
+			"js": ["js/jquery-1.8.2.js", "js/content.js"],
+			"css": ["css/ne-style.css"],
+			"all_frames": true
 		}
 	],
-	"manifest_version": 2
+
+	"manifest_version": 2,
+	"web_accessible_resources": ["css/ne-style.css", "img/rt-sprite.png"],
+
+	"page_action": {
+		"default_icon": {
+			"19": "img/icon-white-19.png",
+			"38": "img/icon-white-38.png"
+		},
+		"default_title": "Netflix Enhancements",
+		"default_popup": "popup.html"
+	}
 }
