@@ -80,6 +80,7 @@
 
 			// Still using my testing api key for now
 			var apiKey = '5jbx2d2khzzetkv3fhkx2rwe';
+			// TODO: use app's own key
 
 			var searchTitle = t.replace(/\s?\(.*\)/g, '');
 			var $div = d;
