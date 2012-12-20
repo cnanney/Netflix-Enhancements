@@ -123,16 +123,17 @@
 									// Can't just compare movie.year == y, because years on both sides can be wrong.
 									// On Netflix a movie could be year 2008, and RT's release date could also be 2008,
 									// but still return 2007 for movie.year, WTF?
-									// So we check release date instead.
+									// So we check release and dvd date instead.
 									// Even then some matches will be off because one will be wrong. Oh well.
-									if (movie.release_dates.hasOwnProperty('theater') && movie.release_dates.theater.slice(0, 4) == y){
+									if ((movie.release_dates.hasOwnProperty('theater') && movie.release_dates.theater.slice(0, 4) == y) ||
+										(movie.release_dates.hasOwnProperty('dvd') && movie.release_dates.dvd.slice(0, 4) == y)){
 										// This has got to be it
 										match = true;
 										processRT(movie);
 									}
 								});
 								if (!match){
-									NEContent.log.push('No RT matches');
+									NEContent.log.push('No RT matches out of '+possibles.length+' possibles');
 									NEContent.writeLog();
 								}
 							}
