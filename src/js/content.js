@@ -78,10 +78,7 @@
 
 			this.log = [];
 
-			// Still using my testing api key for now
-			var apiKey = '5jbx2d2khzzetkv3fhkx2rwe';
-			// TODO: use app's own key
-
+			var apiKey = 'ff4cu2k9h23mtght5jpgpn5v';
 			var searchTitle = t.replace(/\s?\(.*\)/g, '');
 			var $div = d;
 			var startRTSearch = new Date();

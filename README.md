@@ -1,4 +1,4 @@
-# [Netflix Enhancements](https://chrome.google.com/webstore/detail/netflix-details-link/glefmeoggphbdgeddmnmhfejpiipcmlf)
+# [Netflix Enhancements](https://chrome.google.com/webstore/detail/netflix-enhancements/glefmeoggphbdgeddmnmhfejpiipcmlf)
 
 This extension gives you the ability to:
 
