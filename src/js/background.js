@@ -27,6 +27,8 @@
 		}
 	);
 
+	// To show a page action only on netflix requires the tabs permission,
+	// so that's where the 'your tabs and browsing history' warning comes in.
 	chrome.tabs.onUpdated.addListener(
 		function(tabId, changeInfo, tab){
 			if (tab.url.indexOf('netflix.com') != -1){

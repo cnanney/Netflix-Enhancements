@@ -33,7 +33,7 @@
 			});
 		},
 
-		observeMutations: function(){
+		observePopupMutations: function(){
 			var target = document.querySelector('#BobMovie');
 			var config = {
 				attributes: true,
@@ -68,6 +68,28 @@
 						}
 					}
 
+				});
+			});
+
+			observer.observe(target, config);
+		},
+
+
+		// Was going to use this instead of listening for web requests, but when new
+		// titles are added with infinite scroll, the mutation event fires anywhere
+		// between 1-5 times, each with addedNodes, so is rather inefficient.
+		// Listening for web requests is the better way IMO, as it only fires once,
+		// and doesn't add any new permissions to extension installation.
+		observeScrollMutations: function(){
+			var target = document.querySelector('.agMovieSet');
+			var config = {
+				childList: true
+			};
+			var observer = new WebKitMutationObserver(function(mutations){
+				mutations.forEach(function(mutation){
+					if (mutation.addedNodes.length > 0){
+						NEContent.detailLinks();
+					}
 				});
 			});
 
@@ -201,7 +223,7 @@
 			chrome.extension.sendMessage({req: 'storage'}, function(response){
 				var storage = response.storage;
 				if (storage['ne-opt-details'] == '1') NEContent.detailLinks();
-				if (storage['ne-opt-rt'] == '1') NEContent.observeMutations();
+				if (storage['ne-opt-rt'] == '1') NEContent.observePopupMutations();
 			});
 
 			chrome.extension.onMessage.addListener(
