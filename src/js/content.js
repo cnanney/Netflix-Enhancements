@@ -185,7 +185,7 @@
 
 					if (rating !== false && score !== false){
 						var html = '<a class="ne-rating ne-'+rating.toLowerCase().replace(/\s/g, '-')+'" '+
-							'href="'+url+'"><span>'+rating+': '+score+'%</span></a>';
+							'href="'+url+'" target="_blank"><span>'+rating+': '+score+'%</span></a>';
 						$div.find('div.info').append(html);
 						NEContent.log.push('RT Rating: '+rating);
 					}
