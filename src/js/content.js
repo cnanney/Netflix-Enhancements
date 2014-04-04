@@ -13,7 +13,7 @@
 		log: [],
 
 		detailLinks: function(){
-			var linkRegex = /^https?:\/\/(?:movies|www)\.?netflix\.com\/WiPlayer\?movieid=(\d+)/;
+			var linkRegex = /^https?:\/\/(?:movies|www)?\.?netflix\.com\/WiPlayer\?movieid=(\d+)/;
 
 			$('span.hoverPlay:not(.ndl-processed)').each(function(){
 
