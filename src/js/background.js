@@ -20,8 +20,8 @@
 		},
 		{
 			urls: [
-				"*://movies.netflix.com/WiGenre*",
-				"*://movies.netflix.com/WiAltGenre*"
+				"*://www.netflix.com/WiGenre*",
+				"*://www.netflix.com/WiAltGenre*"
 			],
 			types: ["xmlhttprequest"]
 		}
