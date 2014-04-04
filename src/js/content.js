@@ -13,14 +13,14 @@
 		log: [],
 
 		detailLinks: function(){
-			var linkRegex = /^https?:\/\/movies\.netflix\.com\/WiPlayer\?movieid=(\d+)/;
+			var linkRegex = /^https?:\/\/(?:movies|www)\.?netflix\.com\/WiPlayer\?movieid=(\d+)/;
 
 			$('span.hoverPlay:not(.ndl-processed)').each(function(){
 
 				var link = $(this).find('a.playLink').attr('href');
 
 				if (link && linkRegex.test(link)){
-					var detailsUrl = 'http://movies.netflix.com/WiMovie/'+link.match(linkRegex)[1];
+					var detailsUrl = 'http://www.netflix.com/WiMovie/'+link.match(linkRegex)[1];
 					var badge = document.createElement('a');
 					badge.className = 'episodeBadge';
 					badge.href = detailsUrl;
