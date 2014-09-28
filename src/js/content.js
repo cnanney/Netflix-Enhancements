@@ -93,7 +93,7 @@
         });
 
         if (muts.length > 0){
-          console.log(muts);
+          //console.log(muts);
           $div = $('#bob-container');
           if ($div.css('opacity') == '1'){
 
@@ -103,7 +103,7 @@
 
               var title = $.trim($div.find('span.title').text());
               var year = $.trim($div.find('span.year').text());
-              console.log('throttle called', Date.now());
+              //console.log('throttle called', Date.now());
               throttled(title, year, $div);
             }
           }
