@@ -6,6 +6,7 @@ a.episodeBadge {
   text-align: center;
   text-decoration: none;
   position: absolute;
+  height: auto !important;
   bottom: 0;
   left: 0;
   right: 0;
